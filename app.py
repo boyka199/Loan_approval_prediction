@@ -65,7 +65,7 @@ if st.button("Predict Loan Approval"):
     y_true = df['Loan_Status']
     y_pred = model.predict(X_scaled)
 
-    accuracy = accuracy_score(y_true, y_pred)
+    accuracy = accuracy_score(y_true, y_pred)#(TP + TN)/ToP
     st.write(f"Model Accuracy: {accuracy * 100:.2f}%")
 
     if prediction == 1:
