@@ -33,6 +33,7 @@ LoanAmount = st.number_input("Loan Amount (in thousands)", value=150)
 Loan_Amount_Term = st.number_input("Loan Term (in days)", value=360)
 Credit_History = st.selectbox("Credit History", [1.0, 0.0])
 Property_Area = st.selectbox("Property Area", ["Urban", "Semiurban", "Rural"])
+Interest = st.selectbox("Interest",["5%","10%"])
 
 # Prepare user input for prediction
 user_input = {
