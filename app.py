@@ -92,7 +92,7 @@ if st.button("Predict Loan Approval"):
 
     # Actual vs Predicted
     plt.figure(figsize=(6, 4))
-    sns.scatterplot(x=y_true, y=y_pred, ci=None, scatter_kws={'color': 'blue'}, line_kws={"color": "red"})
+    sns.regplot(x=y_true, y=y_pred, ci=None, scatter_kws={'color': 'blue'}, line_kws={"color": "red"})
     plt.title("Actual vs Predicted Loan Status")
     plt.xlabel("Actual")
     plt.ylabel("Predicted")
