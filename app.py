@@ -97,13 +97,6 @@ if st.button("Predict Loan Approval"):
     plt.xlabel("Actual")
     plt.ylabel("Predicted")
     st.pyplot(plt)
-
-    plt.figure(figsize=(8, 6))
-    sns.countplot(data=df, x="Education", hue="Loan_Status", palette="Set2")
-
-    plt.title("Loan Status by Education Level")
-    plt.xlabel("Education")
-    plt.ylabel("Count")
     plt.legend(title="Loan Status")
     plt.tight_layout()
     plt.show()
