@@ -100,12 +100,3 @@ if st.button("Predict Loan Approval"):
     plt.legend(title="Loan Status")
     plt.tight_layout()
     plt.show()
-
-    fig, ax = plt.subplots(figsize=(8, 6))
-    sns.countplot(data=df, x="Education", hue="Loan_Status", palette="Set2", ax=ax)
-    ax.set_title("Loan Status by Education Level")
-    ax.set_xlabel("Education")
-    ax.set_ylabel("Count")
-
-    # Show plot in Streamlit
-    st.pyplot(fig)
