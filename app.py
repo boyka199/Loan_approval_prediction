@@ -64,7 +64,11 @@ if st.button("Predict Loan Approval"):
     X = X.reindex(columns=features, fill_value=0)
     X_scaled = scaler.transform(X)
     y_true = df['Loan_Status']
-    y_pred = model.predict(X_scaled)
+    if Loan_Amount_Term <= 0:
+    st.warning("Loan Term must be greater than 100 days.")
+    else:
+        prediction = model.predict(user_scaled)[0]
+        y_pred = model.predict(X_scaled)
 
     accuracy = accuracy_score(y_true, y_pred)#(TP + TN)/ToP
     st.write(f"Model Accuracy: {accuracy * 100:.2f}%")
