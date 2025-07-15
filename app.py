@@ -37,6 +37,12 @@ Property_Area = st.selectbox("Property Area", ["Urban", "Semiurban", "Rural"])
 # Check for invalid loan term
 if Loan_Amount_Term <= 50:
     st.warning("❗ Loan Term must be greater than 50 days. Please enter a valid loan term.")
+elif LoanAmount <= 50:
+    st.warning(" Loan Amount should not be less than 50,000")
+elif ApplicantIncome <= 5000:
+    st.warning(" Income should not be less than 5000")
+elif CoapplicantIncome <=3000:
+    st.warning("CoapplicantIncome should not be less than 3000")
 else:
     # Prepare user input for prediction
     user_input = {
