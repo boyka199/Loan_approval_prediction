@@ -35,7 +35,7 @@ Credit_History = st.selectbox("Credit History", [1.0, 0.0])
 Property_Area = st.selectbox("Property Area", ["Urban", "Semiurban", "Rural"])
 
 # Check for invalid loan term
-if Loan_Amount_Term <= 0:
+if Loan_Amount_Term <= 50:
     st.warning("❗ Loan Term must be greater than 50 days. Please enter a valid loan term.")
 else:
     # Prepare user input for prediction
